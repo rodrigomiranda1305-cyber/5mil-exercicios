@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>5.000 Exercícios para Deixar Seu Filho Mais Inteligente</title>
+<meta name="description" content="5.000 atividades prontas para desenvolver raciocínio, atenção, linguagem e criatividade — do berço ao 5º ano. Por apenas R$19,90.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --verde: #2d7a3a;
+    --verde-claro: #e8f5eb;
+    --verde-escuro: #1a5226;
+    --amarelo: #f5c518;
+    --amarelo-claro: #fffbe6;
+    --laranja: #e05c1a;
+    --texto: #1a1a1a;
+    --texto-muted: #555;
+    --bg: #fffdf9;
+    --branco: #ffffff;
+    --borda: #e0e0d8;
+    --radius: 14px;
+    --shadow: 0 4px 24px rgba(0,0,0,0.09);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Nunito', sans-serif;
+    background: var(--bg);
+    color: var(--texto);
+    line-height: 1.7;
+    font-size: 17px;
+  }
+
+  /* ─── TOPBAR ─── */
+  .topbar {
+    background: var(--verde-escuro);
+    color: #fff;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+  }
+  .topbar span { color: var(--amarelo); }
+
+  /* ─── HERO ─── */
+  .hero {
+    background: linear-gradient(160deg, #1a5226 0%, #2d7a3a 60%, #3d9e4e 100%);
+    color: #fff;
+    padding: 60px 20px 70px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -80px; right: -80px;
+    width: 300px; height: 300px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -60px; left: -60px;
+    width: 220px; height: 220px;
+    background: rgba(255,255,255,0.04);
+    border-radius: 50%;
+  }
+  .hero-inner { max-width: 760px; margin: 0 auto; position: relative; z-index: 1; }
+
+  .hero-badge {
+    display: inline-block;
+    background: var(--amarelo);
+    color: #1a1a1a;
+    font-size: 12px;
+    font-weight: 800;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    padding: 6px 18px;
+    border-radius: 100px;
+    margin-bottom: 22px;
+  }
+
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(28px, 5vw, 46px);
+    font-weight: 900;
+    line-height: 1.25;
+    margin-bottom: 20px;
+    color: #fff;
+  }
+  .hero h1 em {
+    color: var(--amarelo);
+    font-style: normal;
+  }
+
+  .hero-sub {
+    font-size: clamp(15px, 2.5vw, 19px);
+    color: rgba(255,255,255,0.88);
+    max-width: 600px;
+    margin: 0 auto 36px;
+  }
+
+  /* Placeholder de imagem hero */
+  .img-placeholder {
+    background: rgba(255,255,255,0.10);
+    border: 2px dashed rgba(255,255,255,0.3);
+    border-radius: var(--radius);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255,255,255,0.6);
+    font-size: 13px;
+    font-weight: 600;
+    gap: 8px;
+    text-align: center;
+    padding: 16px;
+  }
+  .img-placeholder svg { opacity: 0.5; }
+  .img-placeholder.hero-img { width: 340px; max-width: 100%; height: 240px; margin: 0 auto 36px; }
+  .img-placeholder.section-img { width: 100%; height: 220px; margin: 24px 0; }
+  .img-placeholder.product-img { width: 280px; max-width: 100%; height: 340px; }
+  .img-placeholder.depo-img { width: 52px; height: 52px; border-radius: 50%; flex-shrink: 0; font-size: 11px; }
+  .img-placeholder.dark { background: rgba(0,0,0,0.06); border-color: rgba(0,0,0,0.18); color: #999; }
+  .img-placeholder.sm { height: 160px; }
+
+  /* ─── CTA BUTTON ─── */
+  .btn-cta {
+    display: inline-block;
+    background: var(--amarelo);
+    color: #1a1a1a;
+    font-family: 'Nunito', sans-serif;
+    font-size: 18px;
+    font-weight: 800;
+    padding: 18px 42px;
+    border-radius: 100px;
+    text-decoration: none;
+    border: none;
+    cursor: pointer;
+    transition: transform .15s, box-shadow .15s;
+    box-shadow: 0 6px 28px rgba(245,197,24,0.45);
+    letter-spacing: 0.3px;
+    line-height: 1.2;
+  }
+  .btn-cta:hover { transform: translateY(-2px) scale(1.02); box-shadow: 0 10px 36px rgba(245,197,24,0.55); }
+  .btn-cta.large { font-size: 20px; padding: 22px 52px; }
+  .btn-cta.verde { background: var(--verde); color: #fff; box-shadow: 0 6px 28px rgba(45,122,58,0.4); }
+  .btn-cta.verde:hover { box-shadow: 0 10px 36px rgba(45,122,58,0.55); }
+
+  .cta-seguro {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    color: rgba(255,255,255,0.7);
+    font-size: 13px;
+    margin-top: 14px;
+  }
+  .cta-seguro.dark { color: var(--texto-muted); }
+
+  /* ─── WRAPPER ─── */
+  .wrapper { max-width: 780px; margin: 0 auto; padding: 0 20px; }
+
+  /* ─── SEÇÕES ─── */
+  section { padding: 64px 20px; }
+
+  .section-label {
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--verde);
+    margin-bottom: 10px;
+  }
+
+  h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    font-weight: 900;
+    line-height: 1.25;
+    color: var(--texto);
+    margin-bottom: 18px;
+  }
+  h2 em { color: var(--verde); font-style: normal; }
+
+  .lead {
+    font-size: 17px;
+    color: var(--texto-muted);
+    max-width: 640px;
+    margin-bottom: 28px;
+  }
+
+  /* ─── PROBLEMA ─── */
+  .sec-problema { background: #fff; }
+  .problema-lista {
+    list-style: none;
+    margin: 28px 0;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .problema-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    font-size: 16px;
+    color: var(--texto);
+    background: #fafaf8;
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    padding: 14px 18px;
+  }
+  .problema-lista li .x {
+    width: 28px; height: 28px; flex-shrink: 0;
+    background: #fee2e2; border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; font-weight: 800; color: #dc2626;
+  }
+
+  /* ─── SOLUÇÃO ─── */
+  .sec-solucao { background: var(--verde-claro); }
+  .solucao-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 24px;
+    margin-top: 32px;
+  }
+  @media(max-width:560px){ .solucao-grid { grid-template-columns: 1fr; } }
+
+  /* ─── CONTEÚDO ─── */
+  .sec-conteudo { background: #fff; }
+  .conteudo-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 18px;
+    margin-top: 32px;
+  }
+  .conteudo-card {
+    background: var(--bg);
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    padding: 22px 18px;
+    text-align: center;
+  }
+  .conteudo-card .icon {
+    font-size: 32px;
+    margin-bottom: 10px;
+  }
+  .conteudo-card h3 {
+    font-size: 15px;
+    font-weight: 800;
+    color: var(--texto);
+    margin-bottom: 6px;
+  }
+  .conteudo-card p {
+    font-size: 13px;
+    color: var(--texto-muted);
+  }
+
+  /* ─── PRODUTO (o que está dentro) ─── */
+  .sec-produto { background: var(--verde-escuro); color: #fff; }
+  .sec-produto h2 { color: #fff; }
+  .sec-produto .lead { color: rgba(255,255,255,0.8); }
+  .produto-inner {
+    display: flex;
+    gap: 48px;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-top: 36px;
+  }
+  .produto-mockup { flex-shrink: 0; }
+  .produto-lista {
+    flex: 1;
+    min-width: 260px;
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+  }
+  .produto-lista li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    font-size: 15px;
+    color: rgba(255,255,255,0.92);
+  }
+  .produto-lista li .check {
+    width: 26px; height: 26px; flex-shrink: 0;
+    background: var(--amarelo);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 13px; color: #1a1a1a; font-weight: 800;
+  }
+
+  /* ─── DEPOIMENTOS ─── */
+  .sec-depo { background: #fff; }
+  .depo-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 36px;
+  }
+  @media(max-width:580px){ .depo-grid { grid-template-columns: 1fr; } }
+  .depo-card {
+    background: var(--verde-claro);
+    border: 1px solid #b7dfc0;
+    border-radius: var(--radius);
+    padding: 22px 20px;
+  }
+  .depo-stars { color: var(--amarelo); font-size: 18px; margin-bottom: 10px; letter-spacing: 2px; }
+  .depo-texto { font-size: 15px; color: var(--texto); margin-bottom: 16px; font-style: italic; }
+  .depo-autor {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+  }
+  .depo-autor-info strong { font-size: 14px; font-weight: 800; display: block; }
+  .depo-autor-info span { font-size: 12px; color: var(--texto-muted); }
+  .depo-whatsapp {
+    background: #e8fde8;
+    border: 1px solid #b2e2b2;
+    border-radius: var(--radius);
+    padding: 18px 20px;
+    margin-top: 20px;
+    font-size: 14px;
+    color: var(--texto);
+    position: relative;
+  }
+  .depo-whatsapp::before {
+    content: '💬 WhatsApp';
+    display: block;
+    font-size: 11px;
+    font-weight: 800;
+    color: #25d366;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+  }
+
+  /* ─── GARANTIA ─── */
+  .sec-garantia {
+    background: var(--amarelo-claro);
+    border-top: 2px solid var(--amarelo);
+    border-bottom: 2px solid var(--amarelo);
+    text-align: center;
+  }
+  .garantia-badge {
+    width: 100px; height: 100px;
+    background: var(--amarelo);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 38px;
+    margin: 0 auto 20px;
+    box-shadow: 0 4px 20px rgba(245,197,24,0.4);
+  }
+
+  /* ─── PREÇO ─── */
+  .sec-preco { background: var(--verde-escuro); color: #fff; text-align: center; }
+  .sec-preco h2 { color: #fff; }
+  .preco-box {
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 20px;
+    padding: 40px 32px;
+    max-width: 480px;
+    margin: 36px auto 0;
+  }
+  .preco-de {
+    font-size: 16px;
+    color: rgba(255,255,255,0.5);
+    text-decoration: line-through;
+    margin-bottom: 4px;
+  }
+  .preco-por {
+    font-family: 'Playfair Display', serif;
+    font-size: 60px;
+    font-weight: 900;
+    color: var(--amarelo);
+    line-height: 1;
+    margin-bottom: 4px;
+  }
+  .preco-desc { font-size: 14px; color: rgba(255,255,255,0.65); margin-bottom: 28px; }
+  .preco-lista {
+    list-style: none;
+    text-align: left;
+    margin-bottom: 28px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .preco-lista li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    color: rgba(255,255,255,0.85);
+  }
+  .preco-lista li::before {
+    content: '✓';
+    width: 22px; height: 22px;
+    background: var(--amarelo);
+    color: #1a1a1a;
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px; font-weight: 800;
+    flex-shrink: 0;
+  }
+
+  /* ─── ORDER BUMP ─── */
+  .sec-bump {
+    background: #fffbf0;
+    border: 2px dashed var(--amarelo);
+    border-radius: 20px;
+    padding: 28px 24px;
+    max-width: 480px;
+    margin: 28px auto 0;
+    text-align: left;
+  }
+  .bump-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+  }
+  .bump-checkbox {
+    width: 26px; height: 26px;
+    background: var(--verde);
+    border-radius: 6px;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px; color: #fff; font-weight: 800;
+    flex-shrink: 0;
+    cursor: pointer;
+  }
+  .bump-header strong {
+    font-size: 14px;
+    font-weight: 800;
+    color: var(--texto);
+    line-height: 1.3;
+  }
+  .bump-desc { font-size: 13px; color: var(--texto-muted); line-height: 1.6; }
+  .bump-preco {
+    display: inline-block;
+    background: var(--verde);
+    color: #fff;
+    font-weight: 800;
+    font-size: 13px;
+    padding: 4px 14px;
+    border-radius: 100px;
+    margin-top: 10px;
+  }
+
+  /* ─── FAQ ─── */
+  .sec-faq { background: #fff; }
+  .faq-lista {
+    margin-top: 32px;
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+    border: 1px solid var(--borda);
+    border-radius: var(--radius);
+    overflow: hidden;
+  }
+  .faq-item {
+    border-bottom: 1px solid var(--borda);
+  }
+  .faq-item:last-child { border-bottom: none; }
+  .faq-q {
+    width: 100%;
+    background: none;
+    border: none;
+    text-align: left;
+    padding: 18px 20px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    font-weight: 700;
+    color: var(--texto);
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+  }
+  .faq-q:hover { background: var(--verde-claro); }
+  .faq-arrow { font-size: 18px; transition: transform .2s; flex-shrink: 0; }
+  .faq-a {
+    display: none;
+    padding: 0 20px 18px;
+    font-size: 14px;
+    color: var(--texto-muted);
+    line-height: 1.7;
+  }
+  .faq-item.open .faq-arrow { transform: rotate(180deg); }
+  .faq-item.open .faq-a { display: block; }
+
+  /* ─── RODAPÉ ─── */
+  footer {
+    background: #111;
+    color: rgba(255,255,255,0.5);
+    text-align: center;
+    padding: 28px 20px;
+    font-size: 12px;
+    line-height: 1.8;
+  }
+  footer a { color: rgba(255,255,255,0.5); text-decoration: underline; }
+
+  /* ─── STICKY CTA MOBILE ─── */
+  .sticky-cta {
+    position: fixed;
+    bottom: 0; left: 0; right: 0;
+    background: var(--verde-escuro);
+    padding: 12px 20px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    z-index: 999;
+    box-shadow: 0 -4px 20px rgba(0,0,0,0.25);
+  }
+  .sticky-cta-txt { color: #fff; font-size: 13px; font-weight: 700; }
+  .sticky-cta-txt span { color: var(--amarelo); font-size: 16px; }
+  @media(max-width:640px){ .sticky-cta { display: flex; } }
+
+  /* ─── ANIMAÇÕES ─── */
+  .fade-in {
+    opacity: 0;
+    transform: translateY(24px);
+    transition: opacity .55s ease, transform .55s ease;
+  }
+  .fade-in.visible {
+    opacity: 1;
+    transform: none;
+  }
+</style>
+</head>
+<body>
+
+<!-- TOPBAR -->
+<div class="topbar">
+  🔥 Promoção por tempo limitado — <span>R$19,90 apenas hoje</span>
+</div>
+
+<!-- ═══════════════ HERO ═══════════════ -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-badge">✨ Mais de 5.000 atividades prontas</div>
+
+    <h1>
+      Sua filha já poderia ser mais inteligente —<br>
+      <em>faltava só a ferramenta certa.</em>
+    </h1>
+
+    <p class="hero-sub">
+      5.000 exercícios práticos para desenvolver raciocínio, atenção, linguagem e criatividade. Do berço ao 5º ano. Prontos pra usar hoje mesmo.
+    </p>
+
+    <!-- IMAGEM HERO — substitua pela sua -->
+    <div class="img-placeholder hero-img">
+      <svg width="40" height="40" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span>📷 Foto: criança concentrada fazendo atividade<br>Luz natural · tom aconchegante</span>
+    </div>
+
+    <a href="#preco" class="btn-cta large">
+      QUERO OS 5.000 EXERCÍCIOS AGORA →
+    </a>
+    <div class="cta-seguro">
+      🔒 Pagamento seguro &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Garantia de 7 dias
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PROBLEMA ═══════════════ -->
+<section class="sec-problema">
+  <div class="wrapper fade-in">
+    <div class="section-label">Você se identifica?</div>
+    <h2>Cada dia que passa é um dia a menos de desenvolvimento</h2>
+    <p class="lead">Pesquisadores confirmam: o cérebro infantil absorve até 85% mais nos primeiros 12 anos de vida. O problema é que ninguém te entrega as ferramentas certas.</p>
+
+    <ul class="problema-lista">
+      <li><span class="x">✕</span> Você sabe que deveria estimular seu filho... mas não sabe exatamente o quê fazer</li>
+      <li><span class="x">✕</span> O tablet resolve o imediato — mas não resolve o futuro</li>
+      <li><span class="x">✕</span> As atividades que você encontra no Google são genéricas e sem sequência</li>
+      <li><span class="x">✕</span> Você chega cansada do trabalho e não tem energia pra criar atividades do zero</li>
+    </ul>
+
+    <!-- IMAGEM SEÇÃO — substitua pela sua -->
+    <div class="img-placeholder dark section-img sm">
+      <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span>📷 Criança com celular/tablet — expressão dispersa</span>
+    </div>
+
+    <p style="font-size:17px; font-weight:800; color:var(--verde);">
+      O problema não é falta de amor. É falta de ferramenta.
+    </p>
+  </div>
+</section>
+
+<!-- ═══════════════ SOLUÇÃO ═══════════════ -->
+<section class="sec-solucao">
+  <div class="wrapper fade-in">
+    <div class="section-label">A solução</div>
+    <h2>5.000 exercícios prontos, organizados e <em>fáceis de aplicar</em></h2>
+    <p class="lead">Não precisa ser professora. Não precisa de materiais caros. Só sentar com seu filho e começar.</p>
+
+    <div class="solucao-grid">
+      <div>
+        <div class="img-placeholder dark section-img">
+          <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>📷 Mãe e filho fazendo atividade juntos<br>Ambiente de casa, sorriso sutil</span>
+        </div>
+      </div>
+      <div style="display:flex;flex-direction:column;justify-content:center;gap:16px;">
+        <div style="background:#fff;border:1px solid #b7dfc0;border-radius:12px;padding:16px 18px;">
+          <div style="font-size:22px;margin-bottom:6px;">🧠</div>
+          <strong style="font-size:15px;">Organizado por faixa etária</strong>
+          <p style="font-size:13px;color:var(--texto-muted);margin-top:4px;">0 a 6 anos e 6 a 12 anos — cada fase tem as atividades certas</p>
+        </div>
+        <div style="background:#fff;border:1px solid #b7dfc0;border-radius:12px;padding:16px 18px;">
+          <div style="font-size:22px;margin-bottom:6px;">📄</div>
+          <strong style="font-size:15px;">PDF pronto pra usar</strong>
+          <p style="font-size:13px;color:var(--texto-muted);margin-top:4px;">Imprime em casa ou usa direto no tablet. Simples assim.</p>
+        </div>
+        <div style="background:#fff;border:1px solid #b7dfc0;border-radius:12px;padding:16px 18px;">
+          <div style="font-size:22px;margin-bottom:6px;">⚡</div>
+          <strong style="font-size:15px;">Acesso na hora</strong>
+          <p style="font-size:13px;color:var(--texto-muted);margin-top:4px;">Comprou, baixou, começou. Ainda hoje.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ O QUE ESTÁ DENTRO ═══════════════ -->
+<section class="sec-conteudo">
+  <div class="wrapper fade-in">
+    <div class="section-label">O que você recebe</div>
+    <h2>5 áreas de desenvolvimento — <em>tudo em um único acervo</em></h2>
+
+    <div class="conteudo-cards">
+      <div class="conteudo-card">
+        <div class="icon">🔢</div>
+        <h3>Raciocínio Lógico</h3>
+        <p>Sequências, padrões, labirintos e desafios matemáticos por nível</p>
+      </div>
+      <div class="conteudo-card">
+        <div class="icon">📚</div>
+        <h3>Linguagem e Leitura</h3>
+        <p>Reconhecimento de letras, sílabas, escrita criativa e compreensão</p>
+      </div>
+      <div class="conteudo-card">
+        <div class="icon">🎯</div>
+        <h3>Atenção e Foco</h3>
+        <p>Atividades de concentração, diferenças, busca e rastreamento visual</p>
+      </div>
+      <div class="conteudo-card">
+        <div class="icon">🎨</div>
+        <h3>Criatividade</h3>
+        <p>Completar desenhos, inventar histórias, associação livre de ideias</p>
+      </div>
+      <div class="conteudo-card">
+        <div class="icon">✏️</div>
+        <h3>Coordenação Motora</h3>
+        <p>Traçados, recorte, pontos de ligação e atividades manuais</p>
+      </div>
+      <div class="conteudo-card">
+        <div class="icon">🌍</div>
+        <h3>Mundo ao Redor</h3>
+        <p>Natureza, cores, formas, emoções e vocabulário ampliado</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ PRODUTO / MOCKUP ═══════════════ -->
+<section class="sec-produto">
+  <div class="wrapper fade-in">
+    <div class="section-label" style="color:rgba(255,255,255,0.5)">O produto</div>
+    <h2>Tudo organizado, explicado e pronto</h2>
+    <p class="lead">Cada atividade já vem com instruções. Você não precisa inventar nada — só aplicar.</p>
+
+    <div class="produto-inner">
+      <div class="produto-mockup">
+        <!-- MOCKUP DO PRODUTO — substitua pela sua capa -->
+        <div class="img-placeholder product-img" style="background:rgba(255,255,255,0.08);border-color:rgba(255,255,255,0.25);color:rgba(255,255,255,0.5);">
+          <svg width="36" height="36" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5"/></svg>
+          <span>📦 Mockup da capa do produto<br>(use Canva ou Mockupworld)</span>
+        </div>
+      </div>
+
+      <ul class="produto-lista">
+        <li><span class="check">✓</span> 5.000 exercícios em PDF de alta qualidade</li>
+        <li><span class="check">✓</span> Atividades para 0 a 6 anos (pré-escola)</li>
+        <li><span class="check">✓</span> Atividades para 6 a 12 anos (fundamental)</li>
+        <li><span class="check">✓</span> Organizadas por área e dificuldade</li>
+        <li><span class="check">✓</span> Imprime em casa — papel A4 comum</li>
+        <li><span class="check">✓</span> Funciona no tablet sem precisar imprimir</li>
+        <li><span class="check">✓</span> Acesso imediato após o pagamento</li>
+        <li><span class="check">✓</span> Sem mensalidade — paga uma vez, usa pra sempre</li>
+      </ul>
+    </div>
+
+    <!-- IMAGEM INTERNA DO PRODUTO -->
+    <div class="img-placeholder section-img" style="background:rgba(255,255,255,0.06);border-color:rgba(255,255,255,0.2);color:rgba(255,255,255,0.45);margin-top:32px;">
+      <svg width="32" height="32" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5"/></svg>
+      <span>📄 Print de uma página interna do PDF<br>(labirinto, liga-pontos ou exemplo real de exercício)</span>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ DEPOIMENTOS ═══════════════ -->
+<section class="sec-depo">
+  <div class="wrapper fade-in">
+    <div class="section-label">Resultados reais</div>
+    <h2>O que as mães estão dizendo</h2>
+
+    <div class="depo-grid">
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-texto">"Minha filha de 5 anos ficou 40 minutos fazendo as atividades sem reclamar. Nunca aconteceu isso antes. Recomendo demais."</p>
+        <div class="depo-autor">
+          <div class="img-placeholder depo-img" style="background:#b7dfc0;border-color:#7dc495;color:#1a5226;font-size:10px;">📷<br>foto</div>
+          <div class="depo-autor-info">
+            <strong>Camila R.</strong>
+            <span>Mãe da Sofia, 5 anos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-texto">"Comprei pro meu filho de 8 anos que tava com dificuldade na escola. Em 3 semanas a professora já comentou a melhora na atenção."</p>
+        <div class="depo-autor">
+          <div class="img-placeholder depo-img" style="background:#b7dfc0;border-color:#7dc495;color:#1a5226;font-size:10px;">📷<br>foto</div>
+          <div class="depo-autor-info">
+            <strong>Renata M.</strong>
+            <span>Mãe do Pedro, 8 anos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-texto">"Uso toda tarde com os dois filhos. Um tem 4 e o outro 9 — e tem exercício pra todos os dois. Vale muito mais do que paguei."</p>
+        <div class="depo-autor">
+          <div class="img-placeholder depo-img" style="background:#b7dfc0;border-color:#7dc495;color:#1a5226;font-size:10px;">📷<br>foto</div>
+          <div class="depo-autor-info">
+            <strong>Fernanda L.</strong>
+            <span>Mãe de 2 filhos</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="depo-card">
+        <div class="depo-stars">★★★★★</div>
+        <p class="depo-texto">"Achei que era mais um PDF qualquer. Mas é muito bem organizado. Já imprimi uns 50 e ainda tenho pra anos. Amei."</p>
+        <div class="depo-autor">
+          <div class="img-placeholder depo-img" style="background:#b7dfc0;border-color:#7dc495;color:#1a5226;font-size:10px;">📷<br>foto</div>
+          <div class="depo-autor-info">
+            <strong>Juliana T.</strong>
+            <span>Mãe da Ana, 7 anos</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DEPOIMENTO WHATSAPP -->
+    <div class="depo-whatsapp">
+      <!-- IMAGEM WHATSAPP — substitua pelo print real -->
+      <div class="img-placeholder dark section-img sm" style="margin-top:8px;">
+        <svg width="28" height="28" fill="none" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="3" stroke="currentColor" stroke-width="1.5"/><circle cx="8.5" cy="8.5" r="1.5" fill="currentColor"/><path d="M21 15l-5-5L5 21" stroke="currentColor" stroke-width="1.5"/></svg>
+        <span>📱 Print de conversa de WhatsApp com depoimento real<br>(blura nome se necessário)</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ GARANTIA ═══════════════ -->
+<section class="sec-garantia">
+  <div class="wrapper fade-in" style="text-align:center;max-width:560px;">
+    <div class="garantia-badge">🛡️</div>
+    <h2>Garantia incondicional de 7 dias</h2>
+    <p class="lead" style="margin:0 auto;">Se por qualquer motivo você não gostar — seja lá qual for — é só mandar uma mensagem e devolvemos 100% do seu dinheiro. Sem perguntas, sem burocracia.</p>
+  </div>
+</section>
+
+<!-- ═══════════════ PREÇO ═══════════════ -->
+<section class="sec-preco" id="preco">
+  <div class="wrapper fade-in" style="text-align:center;">
+    <div class="section-label" style="color:rgba(255,255,255,0.5)">Oferta especial</div>
+    <h2>Comece hoje por apenas</h2>
+
+    <div class="preco-box">
+      <p class="preco-de">De R$97,00</p>
+      <p class="preco-por">R$19,90</p>
+      <p class="preco-desc">Pagamento único · Acesso imediato · Sem mensalidade</p>
+
+      <ul class="preco-lista">
+        <li>5.000 exercícios prontos (PDF)</li>
+        <li>Atividades 0–6 anos e 6–12 anos</li>
+        <li>Funciona no tablet ou impresso</li>
+        <li>Acesso vitalício</li>
+        <li>Garantia de 7 dias</li>
+      </ul>
+
+      <a href="SEU_LINK_DE_CHECKOUT_AQUI" class="btn-cta large" style="display:block;text-align:center;">
+        QUERO AGORA — R$19,90 →
+      </a>
+      <div class="cta-seguro dark" style="margin-top:12px;color:rgba(255,255,255,0.55);">
+        🔒 Pagamento seguro &nbsp;·&nbsp; Pix, Cartão ou Boleto
+      </div>
+    </div>
+
+    <!-- ORDER BUMP -->
+    <div class="sec-bump">
+      <div class="bump-header">
+        <div class="bump-checkbox">✓</div>
+        <strong>✅ Sim! Quero também o Guia de Rotina Inteligente por apenas +R$9,90</strong>
+      </div>
+      <p class="bump-desc">
+        30 hábitos diários comprovados que multiplicam o desenvolvimento do seu filho — organização do dia, tempo de tela saudável, rotina de estudo e muito mais. PDF entregue junto com seu pedido.
+      </p>
+      <span class="bump-preco">+ R$9,90 apenas — inclua agora</span>
+    </div>
+
+  </div>
+</section>
+
+<!-- ═══════════════ FAQ ═══════════════ -->
+<section class="sec-faq">
+  <div class="wrapper fade-in">
+    <div class="section-label">Dúvidas frequentes</div>
+    <h2>Perguntas e respostas</h2>
+
+    <div class="faq-lista">
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Como recebo o produto? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Após o pagamento, você recebe um e-mail com o link de download imediato. Funciona no celular, computador ou tablet.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Funciona pra qual idade? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">As atividades cobrem de 0 a 12 anos — divididas por faixa etária e nível de dificuldade. Seja seu filho bebê ou já no ensino fundamental, tem exercícios adequados.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Precisa imprimir ou funciona no tablet? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Os dois! Você pode imprimir em casa num papel A4 comum, ou usar direto no tablet com uma caneta stylus. Fica a seu critério.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Precisa de formação em educação pra aplicar? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Não. Cada atividade já vem com uma instrução simples. É só sentar com seu filho e começar — qualquer mãe (ou pai) consegue.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          E se eu não gostar? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">Você tem 7 dias de garantia total. Se por qualquer motivo não gostar, é só pedir o reembolso e devolvemos 100% do valor. Sem perguntas.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q" onclick="toggleFaq(this)">
+          Posso compartilhar com outras mães? <span class="faq-arrow">▾</span>
+        </button>
+        <div class="faq-a">O acesso é individual. Cada mãe precisa ter a própria licença. Mas você pode indicar pra suas amigas — cada uma garante a dela.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ CTA FINAL ═══════════════ -->
+<section style="background:var(--verde);padding:64px 20px;text-align:center;">
+  <div class="wrapper fade-in">
+    <h2 style="color:#fff;font-size:clamp(22px,4vw,34px);">
+      Seu filho não pode esperar.<br>O cérebro dele está sendo moldado <em style="color:var(--amarelo);">agora.</em>
+    </h2>
+    <p style="color:rgba(255,255,255,0.85);font-size:17px;max-width:520px;margin:16px auto 32px;">
+      Por menos do que uma pizza, você coloca nas suas mãos 5.000 ferramentas pra mudar o futuro dele.
+    </p>
+    <a href="#preco" class="btn-cta large">
+      GARANTIR MEU ACESSO — R$19,90 →
+    </a>
+    <div class="cta-seguro" style="margin-top:14px;">
+      🔒 Compra segura &nbsp;·&nbsp; Acesso imediato &nbsp;·&nbsp; Garantia 7 dias
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════════ RODAPÉ ═══════════════ -->
+<footer>
+  <p>© 2025 · 5.000 Exercícios Infantis · Todos os direitos reservados</p>
+  <p style="margin-top:6px;">
+    <a href="#">Política de Privacidade</a> &nbsp;·&nbsp;
+    <a href="#">Termos de Uso</a> &nbsp;·&nbsp;
+    <a href="#">Suporte</a>
+  </p>
+  <p style="margin-top:10px; font-size:11px; color:rgba(255,255,255,0.3);">
+    Este produto é entregue em formato digital (PDF). Os resultados podem variar conforme a frequência de uso.<br>
+    Garantia de 7 dias conforme o Código de Defesa do Consumidor.
+  </p>
+</footer>
+
+<!-- STICKY MOBILE -->
+<div class="sticky-cta">
+  <div class="sticky-cta-txt">5.000 Exercícios<br><span>R$19,90</span></div>
+  <a href="#preco" class="btn-cta" style="font-size:14px;padding:12px 22px;white-space:nowrap;">GARANTIR AGORA →</a>
+</div>
+
+<script>
+  // FAQ toggle
+  function toggleFaq(btn) {
+    const item = btn.parentElement;
+    item.classList.toggle('open');
+  }
+
+  // Scroll animations
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+        observer.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.12 });
+  document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
+
+  // Smooth scroll pra #preco
+  document.querySelectorAll('a[href="#preco"]').forEach(a => {
+    a.addEventListener('click', e => {
+      e.preventDefault();
+      document.getElementById('preco').scrollIntoView({ behavior: 'smooth' });
+    });
+  });
+</script>
+</body>
+</html>
